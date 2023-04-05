@@ -1,17 +1,18 @@
 import React from 'react'
+import '../stylesheet/Menu.css'
 import { Link } from 'react-router-dom'
 
 const Menu = () => {
   return (
     <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center">
             <div className="container-fluid">
-                <Link className="navbar-brand" to={"/"}>Biblioteca</Link>
+                <Link className="navbar-brand" to={"/"}>Tienda</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon toggle-bar"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-5 text-center">
                     <li className="nav-item">
                         <Link className="nav-link active" to={"/"}>Home</Link>
                     </li>

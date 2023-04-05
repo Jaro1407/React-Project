@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+}
+
+.content-container {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px 10px 10px;
+    gap: 35px;
+}
+
+.texto-container {
+    width: 800px;
+    font-size: 21px;
+}
+
+.black-span {
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+}
+
+.grey-span {
+    font-size: 50px;
+    color: rgb(139, 139, 139);
+    font-weight: 400;
+}

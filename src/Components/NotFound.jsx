@@ -1,9 +1,13 @@
 import React from "react";
+import Menu from "./Menu";
 
 function NotFound(){
 
     return(
-        <h1>Not Found</h1>
+        <div>
+            <Menu />
+            <h1>Not Found</h1>
+        </div>
     )
 }
 

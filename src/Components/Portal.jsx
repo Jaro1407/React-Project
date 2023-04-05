@@ -1,9 +1,11 @@
 import React from "react";
+import Menu from "./Menu";
 
 function Portal(){
     return(
         <div>
-        <h1>Portal Empleados</h1>
+            <Menu />
+            <h1>Portal Empleados</h1>
         </div>
     )
 }
