@@ -8,7 +8,7 @@
     margin-top: 1rem;
 }
 
-.nav-link {
+.nav-link, .navbar-brand {
     text-decoration: none;
     color: #ddd !important;
 }
@@ -77,6 +77,5 @@
 
 .navbar {
     background-color: black;
-    height:  100px;
     color: white;
     }

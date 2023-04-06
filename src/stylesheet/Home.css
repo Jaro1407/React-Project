@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 700px;
+    min-height: 700px;
 }
 
 .content-container {
