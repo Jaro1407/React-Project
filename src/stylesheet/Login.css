@@ -1,5 +1,5 @@
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -7,8 +7,55 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
 
-
 .login-container {
-    min-height: calc(100vh - 80px);
+    min-height: calc(95vh - 80px);
+    overflow: hidden;
 }
+
+.login-header h2 {
+    font-size: 31px;
+    text-justify: inter-word;
+}
+
+.login-header p {
+    font-size: 21px;
+    color: #a0a0a0;
+}
+
+.form-group {
+    width: 400px !important;
+}
+
+label:not(.checkboxLabel) {
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 10px;
+    transform: translate(30px, -10px);
+    font-size: 14px;
+  }
+
+input[type=text],
+input[type=password] {
+  border: 1px solid black;
+  height: 50px;
+  padding: 0 2rem;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 100px;
+}
+
+button {
+    border: none;
+    color: black;
+    padding: 1rem;
+    border-radius: 100px !important;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase !important;
+    font-size: 18px;
+    height: 50px;
+    cursor: pointer;
+  }
 
