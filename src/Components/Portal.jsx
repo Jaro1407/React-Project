@@ -1,11 +1,20 @@
 import React from "react";
 import Menu from "./Menu";
+import Login from "./Login";
+import Footer from "./Footer";
 
 function Portal(){
     return(
         <div>
             <Menu />
-            <h1>Portal Empleados</h1>
+
+            <div>
+                <Login/>
+            </div>
+
+
+            
+            <Footer/>
         </div>
     )
 }
