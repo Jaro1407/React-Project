@@ -1,24 +1,18 @@
 import React from "react";
+import '../stylesheet/Login.css'
 
-function Login() {
+function Login () {
 
     return (
 
-        <div>
-            <form class="row g-3">
-                <div class="col-auto">
-                    <label for="inputEmail2" class="visually-hidden">Email</label>
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" placeholder="email@example.com"></input>
-                </div>
-                <div class="col-auto">
-                    <label for="inputPassword2" class="visually-hidden">Password</label>
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="Password"></input>
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
-                </div>
-            </form>
-        </div>
+        <div className="cover">
+            <h2>Ingresa tu usuario y contraseña</h2>
+            
+            <input type="text" placeholder="username"/>
+            <input type="password" placeholder="password" />
+            <button className="btn btn-success">Ingresar</button>
+        </div>        
+
     )
 };
 
