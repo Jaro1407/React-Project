@@ -9,12 +9,12 @@ function Portal(){
             <Menu />
 
             <div>
-                <Login/>
+                <Login />
             </div>
 
 
             
-            <Footer/>
+            <Footer />
         </div>
     )
 }
