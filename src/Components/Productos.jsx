@@ -1,5 +1,8 @@
 import React from "react";
 import Menu from "./Menu";
+import Imagenes from "./Imagenes";
+import pro1 from "../assets/Imagenes/pro1.jpg"
+import pro2 from "../assets/Imagenes/pro2.jpg"
 import Footer from "./Footer";
 
 
@@ -19,19 +22,33 @@ function Productos() {
                         </p>
                     </div>
                     <div className="img-container">
-
+                    <Imagenes
+                            imagen={pro1}
+                            width='325'
+                            heigth='100'
+                            alt='Reunion'
+                            style={{ borderRadius: 400 / 2 }}
+                        />
                     </div>  
                 </div>
                 <div className="content-container">
                     <div className="img-container">
-
+                    <Imagenes
+                            imagen={pro2}
+                            width='325'
+                            heigth='100'
+                            alt='Reunion'
+                            style={{ borderRadius: 400 / 2 }}
+                        />
                     </div>
                     <div className="texto-container">
                         <span className='grey-span'>Video Juegos</span>
+                        
                         <p>
                         En nuestra tienda, estamos comprometidos a ofrecer la mejor selección de juegos y consolas para que puedas disfrutar al máximo de tu experiencia de juego. <br />
                         En cuanto a juegos, tenemos un amplio catálogo que incluye los últimos lanzamientos y los clásicos favoritos de todos los tiempos. Ofrecemos juegos para todas las edades y géneros, desde aventuras emocionantes hasta juegos de deportes y carreras. Entre nuestros juegos más populares se encuentran FIFA 23, Call of Duty: Vanguard, Grand Theft Auto V, Super Smash Bros. Ultimate y muchos más.
                         </p>
+                        
                     </div>
                 </div>
             </div>
