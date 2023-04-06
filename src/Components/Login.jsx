@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import users from '../assets/Json/users.json';
+import Imagenes from './Imagenes';
+import Store from '../assets/Imagenes/store-svg.svg';
 import '../stylesheet/Login.css';
 
 function Login () {
@@ -48,27 +50,34 @@ function Login () {
 
     return (
 
-        <div className="container login-container d-flex">
-            <div className="row">
-                <div className="col-lg-5 col-md-4 col-sm-12 d-flex flex-column justify-content-center align-items-center login-left">
-                    <div className="login-header">
-                        <h1>Bienvenido al Portal de Empleados</h1>
-                        <p>Inicia Sesion para acceder a la plataforma</p>
+        <div className="login-container d-flex">
+            <div className="container d-flex align-items-center justify-content-center">
+                <div className="row d-flex align-items-center mx-4">
+                    <div className="col-lg-6 col-md-8 login-left">
+                        <div className="login-header mb-5">
+                            <h2>Bienvenido al Portal de Empleados</h2>
+                            <p>Inicia Sesion para acceder a la plataforma</p>
+                        </div>
+                        <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center">
+                            <div className="form-group mb-5">
+                                <label htmlFor="username">Username:</label>
+                                <input type="text" name="username" required autoComplete="off" value={formValues.username} onChange={handleInputChange} />
+                            </div>
+                            <div className="form-group mb-5">
+                                <label htmlFor="password">Password:</label>
+                                <input type="password" name="password" required value={formValues.password} onChange={handleInputChange} />
+                            </div>
+                            <button type="submit">Login</button>
+                        </form>
                     </div>
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="username">Username:</label>
-                            <input type="text" name="username" required autoComplete="off" value={formValues.username} onChange={handleInputChange} />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password:</label>
-                            <input type="password" name="password" required value={formValues.password} onChange={handleInputChange} />
-                        </div>
-                        <button type="submit">Login</button>
-                    </form>
-                </div>
-                <div className="col-lg-5 col-md-4 d-sm-none login-right">
-
+                    <div className="col-lg-6 col-md-4 d-none d-md-block login-right">
+                        <Imagenes
+                            imagen={Store}
+                            width='325'
+                            heigth='100'
+                            alt='Store'
+                        />
+                    </div>
                 </div>
             </div>
         </div>       
