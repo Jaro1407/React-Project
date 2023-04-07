@@ -14,13 +14,13 @@ const Menu = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-5 text-center">
                     <li className="nav-item">
-                        <Link className="nav-link active" to={"/"}>Home</Link>
+                        <Link className="nav-link active" to={"/"}><b>Home</b></Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to={"/Productos"}>Productos</Link>
+                        <Link className="nav-link active" to={"/Productos"}><b>Productos</b></Link>
                     </li> 
                     <li className="nav-item">
-                        <Link className="nav-link active" to={"/Portal"}>Portal</Link>
+                        <Link className="nav-link active" to={"/Portal"}><b>Portal</b></Link>
                     </li> 
                 </ul>
                 </div>

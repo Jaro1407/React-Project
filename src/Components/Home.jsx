@@ -15,7 +15,7 @@ function Home() {
             <div className="container-fluid px-0">
                 <div className="row content-container">
                     <div className="col-lg-6 col-sm-12 col-md-12 texto-container">
-                        <span className='black-span'>¿ </span> <span className='grey-span'>Quienes Somos </span> <span className='black-span'> ?</span>
+                        <span className='black-span'> </span> <span className='grey-span'>¿Quienes Somos? </span> <span className='black-span'> </span>
                         <p>
                             Bienvenido a nuestra tienda de teléfonos y videojuegos. Somos un equipo de expertos apasionados por la tecnología y los videojuegos, y nos encanta compartir nuestra experiencia y conocimientos con nuestros clientes.
                             Nuestro objetivo es ofrecer una experiencia de compra única y satisfactoria a nuestros clientes. Por esta razón, contamos con un equipo de profesionales capacitados y amables que están siempre dispuestos a ayudar y asesorar a nuestros clientes en su elección de productos.
@@ -24,7 +24,7 @@ function Home() {
                     <div className="col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center img-container">
                         <Imagenes
                             imagen={Imagen4}
-                            width='325'
+                            width='500'
                             heigth='100'
                             alt='Reunion'
                             style={{ borderRadius: 400 / 2 }}
@@ -35,7 +35,7 @@ function Home() {
                     <div className="col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center img-container">
                         <Imagenes
                             imagen={Imagen5}
-                            width='325'
+                            width='500'
                             heigth='100'
                             alt='Reunion'
                             style={{ borderRadius: 400 / 2 }}
