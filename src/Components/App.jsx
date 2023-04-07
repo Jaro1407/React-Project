@@ -6,6 +6,7 @@ import Productos from "./Productos";
 import NotFound from "./NotFound";
 import Celulares from "./Celulares";
 import Juegos from "./Juegos"
+import JuegosForm from "./JuegosForm";
 
 
 function App (){
@@ -18,6 +19,9 @@ function App (){
                 <Route path="/Portal" element={<Portal/>} />
                 <Route path="/celulares" element={<Celulares/>} />
                 <Route path="/Juegos" element={<Juegos/>} />
+                <Route path="/Juegos/new" element={<JuegosForm />} />
+                <Route path="/Juegos/edit/:id" element={<JuegosForm />} />
+                <Route path="/Juegos/delete/:id" element={<JuegosForm del={true} />} />
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </BrowserRouter>
