@@ -26,8 +26,8 @@
     font-weight: bold;
 }
 
-.grey-span {
-    font-size: 50px;
-    color: rgb(139, 139, 139);
+.text-span {
+    font-size: 44px;
+    color:black;
     font-weight: 400;
 }
