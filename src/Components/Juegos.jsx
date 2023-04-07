@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Tabla from './Tabla';
 import Menu from './Menu';
+import MenuPortal from './MenuPortal'
 import Footer from './Footer';
 
 const Juegos = () => {
@@ -30,6 +31,7 @@ async function cargarJuegos() {
 return (
     <div>
         <Menu />
+        <MenuPortal/>
         <h1>Inventario Juegos</h1>
         {/* This ternary statement will show the loader until we have an API response */}
 
