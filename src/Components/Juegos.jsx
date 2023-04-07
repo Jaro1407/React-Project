@@ -5,6 +5,7 @@ import Menu from './Menu';
 import MenuPortal from './MenuPortal'
 import Footer from './Footer';
 
+
 const Juegos = () => {
 
     // We first declare the variable that will change state and update the data pulled from the API
