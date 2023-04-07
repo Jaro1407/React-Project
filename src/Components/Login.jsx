@@ -48,7 +48,8 @@ function Login () {
                 console.log('Invalid username or password.');
             }
         }; 
-        
+
+
 
 
     return (
@@ -61,7 +62,7 @@ function Login () {
                             <h2>Bienvenido al Portal de Empleados</h2>
                             <p>Inicia Sesion para acceder a la plataforma</p>
                         </div>
-                        <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center">
+                        <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center 'needs-validation' noValidate">
                             <div className="form-group mb-5">
                                 <label htmlFor="username">Username:</label>
                                 <input type="text" name="username" required autoComplete="off" value={formValues.username} onChange={handleInputChange} />

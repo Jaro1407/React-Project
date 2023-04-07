@@ -1,5 +1,7 @@
 .wrapper {
     background-image: url("../assets/Imagenes/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     min-height: 700px;
