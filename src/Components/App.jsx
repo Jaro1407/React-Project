@@ -4,6 +4,7 @@ import Home from "./Home"
 import Portal from "./Portal";
 import Productos from "./Productos";
 import NotFound from "./NotFound";
+import Celulares from "./Celulares";
 
 
 function App (){
@@ -14,6 +15,7 @@ function App (){
                 <Route path="/" element={<Home/>} />
                 <Route path="/Productos" element={<Productos/>} />
                 <Route path="/Portal" element={<Portal/>} />
+                <Route path="/celulares" element={<Celulares/>} />
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </BrowserRouter>
