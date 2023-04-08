@@ -4,43 +4,47 @@ import FooterForm from "./FooterForm"
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from "axios"
 
-const JuegosForm = ({del}) =>{
 
-    const[titulo, setTitulo] = useState("")
-    const[descripcion, setDescripcion] = useState("")
-    const[plataforma, setPlataforma] = useState("")
+
+const CelularesForm = ({del}) =>{
+
+    const[marca, setMarca] = useState("")
+    const[modelo, setModelo] = useState("")
+    const[color, setColor] = useState("")
     const[precio, setPrecio] = useState("")
-    const[categoria, setCategoria] = useState("")
+    const[descripcion, setDescripcion] = useState("")
+    const[operadora, setOperadora] = useState("")
 
     let p = useParams()
     const navigate = useNavigate()
   
     useEffect(() =>{
         if(p.id !== undefined)
-            getJuego()
+            cargarCelulares()
 
         if(del !== true)
             // eslint-disable-next-line react-hooks/exhaustive-deps
             del = false
     }, [])
 
-    async function getJuego(){
+    async function cargarCelulares(){
         try{
-            let res = await axios("https://denny2023.azurewebsites.net/api/juegos/"+p.id)
+            let res = await axios("https://denny2023.azurewebsites.net/api/celulares/"+p.id)
             let data = await res.data
 
-            setTitulo(data.titulo)
-            setDescripcion(data.descripcion)
-            setPlataforma(data.plataforma)
+            setMarca(data.marca)
+            setModelo(data.modelo)
+            setColor(data.color)
             setPrecio(data.precio)
-            setCategoria(data.categoria)
+            setDescripcion(data.descripcion)
+            setOperadora(data.operadora)
             
         }
         catch(error){
             alert(error)
 
             if(error.response.status === 404)
-                navigate("/Juegos")
+                navigate("/Celulares")
         }
     }
 
@@ -66,39 +70,40 @@ const JuegosForm = ({del}) =>{
 
     async function eliminar(){
         try{
-            let res = await axios.delete("https://denny2023.azurewebsites.net/api/juegos?id="+p.id)
+            let res = await axios.delete("https://denny2023.azurewebsites.net/api/celulares?id="+p.id)
             let data = await res.data
 
             alert(data.message)
 
             if(data.status === 1)
-                navigate("/Juegos")
+                navigate("/Celulares")
         }
         catch(error){
             alert(error)
 
             if(error.response.status === 404)
-                navigate("/Juegos")
+                navigate("/Celulares")
         }
     }
 
     async function editar(){
         try{
-            let juego = {
-                juegoId: p.id,
-                titulo: titulo,
-                descripcion: descripcion,
-                plataforma: plataforma,
+            let celular = {
+                celularId: p.id,
+                marca: marca,
+                modelo: modelo,
+                color: color,
                 precio: precio,
-                categoria: categoria
+                descripcion: descripcion,
+                operadora: operadora,
             }
-            let res = await axios.put("https://denny2023.azurewebsites.net/api/juegos", juego)
+            let res = await axios.put("https://denny2023.azurewebsites.net/api/celulares", celular)
             let data = res.data
 
             alert(data.message)
 
             if(data.status === 1)
-                navigate("/Juegos")
+                navigate("/Celulares")
         }
         catch(error){
             alert(error)
@@ -107,21 +112,22 @@ const JuegosForm = ({del}) =>{
 
     async function guardar(){
         try{
-            let juego = {
-                titulo: titulo,
-                descripcion: descripcion,
-                plataforma: plataforma,
+            let celular = {
+                marca: marca,
+                modelo: modelo,
+                color: color,
                 precio: precio,
-                categoria: categoria
+                descripcion: descripcion,
+                operadora: operadora,
               }
 
-            let res = await axios.post("https://denny2023.azurewebsites.net/api/juegos", juego)
+            let res = await axios.post("https://denny2023.azurewebsites.net/api/celulares", celular)
             let data = await res.data
 
             alert(data.message)
 
             if(data.status === 1)
-              navigate("/Juegos")
+              navigate("/Celulares")
         }
         catch(error){
             alert(error)
@@ -138,7 +144,7 @@ const JuegosForm = ({del}) =>{
         <div>
         <MenuPortal />
         
-            
+        
             <form id="formulario" className="needs-validation" noValidate>
                 {
                     p.id !== undefined ?
@@ -150,47 +156,52 @@ const JuegosForm = ({del}) =>{
                     ""
                 }
                 
-                <div className="form-group mb-5">
+                <div className="form-group mb-4">
                     <label className="form-label"></label>
-                    <input className="form-control" required type="text" disabled={del} value={titulo} onChange={(e) => setTitulo(e.target.value)} placeholder="Ingrese el titulo del juego" />
+                    <input className="form-control" required type="text" disabled={del} value={marca} onChange={(e) => setMarca(e.target.value)} placeholder="Ingrese la marca del celular" />
                     <div className="valid-feedback">Correcto</div>
                 <div className="invalid-feedback">Complete el campo</div>
                 </div>
-                <div className="form-group mb-5">
+                <div className="form-group mb-4">
                     <label className="form-label"></label>
-                    <input className="form-control" required type="text" disabled={del} value={descripcion} onChange={(e) => setDescripcion(e.target.value)} placeholder="Ingrese la descripción" />
+                    <input className="form-control" required type="text" disabled={del} value={modelo} onChange={(e) => setModelo(e.target.value)} placeholder="Ingrese el modelo" />
                     <div className="valid-feedback">Correcto</div>
                 <div className="invalid-feedback">Complete el campo</div>
                 </div>
-                <div className="form-group mb-5">
+                <div className="form-group mb-4">
                     <label className="form-label"></label>
-                    <input className="form-control" required type="text" disabled={del} value={plataforma} onChange={(e) => setPlataforma(e.target.value)}  placeholder="Ingrese la plataforma" />
+                    <input className="form-control" required type="text" disabled={del} value={color} onChange={(e) => setColor(e.target.value)}  placeholder="Ingrese el color" />
                     <div className="valid-feedback">Correcto</div>
                     <div className="invalid-feedback">Complete el campo</div>
                 </div>
-                <div className="form-group mb-5">
+                <div className="form-group mb-4">
                     <label className="form-label"></label>
                     <input className="form-control" required type="text" disabled={del} value={precio} onChange={(e) => setPrecio(e.target.value)}  placeholder="Ingrese el precio" />
                     <div className="valid-feedback">Correcto</div>
                     <div className="invalid-feedback">Complete el campo</div>
                 </div>
-                <div className="form-group mb-5">
+                <div className="form-group mb-4">
                     <label className="form-label"></label>
-                    <input className="form-control" required type="text" disabled={del} value={categoria} onChange={(e) => setCategoria(e.target.value)}  placeholder="Ingrese la categoria" />
+                    <input className="form-control" required type="text" disabled={del} value={descripcion} onChange={(e) => setDescripcion(e.target.value)}  placeholder="Ingrese la descripcion" />
+                    <div className="valid-feedback">Correcto</div>
+                    <div className="invalid-feedback">Complete el campo</div>
+                </div>
+                <div className="form-group mb-4">
+                    <label className="form-label"></label>
+                    <input className="form-control" required type="text" disabled={del} value={operadora} onChange={(e) => setOperadora(e.target.value)}  placeholder="Ingrese la operadora" />
                     <div className="valid-feedback">Correcto</div>
                     <div className="invalid-feedback">Complete el campo</div>
                 </div>
 
                 <div className="form-group">
                     <input type="submit" onClick={(e) => enviar(e)} className={`btn btn-${p.id === undefined ? "success" : del === true ? "danger" : "primary"}`} value={p.id === undefined ? "Guardar" : del === true ? "Eliminar" : "Editar"} />
-                    <button className="btn btn-warning" onClick={() => navigate("/Juegos")}>Cancelar</button>
+                    <button className="btn btn-warning" onClick={() => navigate("/Celulares")}>Cancelar</button>
                 </div>
             </form>
         
-        
-        <FooterForm/>    
+        <FooterForm/>
         </div>
     )
 }
 
-export default JuegosForm
+export default CelularesForm

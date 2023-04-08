@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Tabla from './Tabla';
-import Menu from './Menu';
 import MenuPortal from './MenuPortal'
 import Footer from './Footer';
 
@@ -30,7 +29,6 @@ const Celulares = () => {
 
     return (
         <div>
-            <Menu />
             <MenuPortal/>
             <h1>Inventario Celulares</h1>
             {/* This ternary statement will show the loader until we have an API response */}
@@ -45,6 +43,7 @@ const Celulares = () => {
                 </div>
                 :
                 <Tabla lista={celulares} controlador={'celulares'} cols={['celularID', 'marca', 'modelo', 'color', 'precio', 'descripcion', 'operadora']} />
+                
             }
             <Footer />
         </div>

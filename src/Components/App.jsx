@@ -5,6 +5,7 @@ import Portal from "./Portal";
 import Productos from "./Productos";
 import NotFound from "./NotFound";
 import Celulares from "./Celulares";
+import CelularesForm from "./CelularesForm";
 import Juegos from "./Juegos"
 import JuegosForm from "./JuegosForm";
 
@@ -17,7 +18,11 @@ function App (){
                 <Route path="/" element={<Home/>} />
                 <Route path="/Productos" element={<Productos/>} />
                 <Route path="/Portal" element={<Portal/>} />
-                <Route path="/celulares" element={<Celulares/>} />
+                <Route path="/Celulares" element={<Celulares/>} />
+                <Route path="/Celulares/new" element={<CelularesForm />} />
+                <Route path="/Celulares/edit/:id" element={<CelularesForm />} />
+                <Route path="/Celulares/delete/:id" element={<CelularesForm del={true} />} />
+                <Route path="*" element={<NotFound/>} />
                 <Route path="/Juegos" element={<Juegos/>} />
                 <Route path="/Juegos/new" element={<JuegosForm />} />
                 <Route path="/Juegos/edit/:id" element={<JuegosForm />} />
