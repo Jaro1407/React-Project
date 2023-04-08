@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "./Menu";
 import Imagenes from "./Imagenes";
 import iphone from "../assets/Imagenes/iphone.jpg"
-import s21 from "../assets/Imagenes/s21.jpg"
+import samsung from "../assets/Imagenes/samsung.jpg"
 import oneplus from "../assets/Imagenes/oneplus.jpeg"
 import fifa23 from "../assets/Imagenes/fifa23.jpg"
 import callofduty from "../assets/Imagenes/callofduty.jpg"
@@ -39,10 +39,10 @@ function Productos() {
                             </div>
                             <div className="carousel-item">
                             <Imagenes
-                                imagen={s21}
+                                imagen={samsung}
                                 width='100%'
                                 heigth='100%'
-                                alt='Galaxys21'
+                                alt='Samsung'
                                 style={{ borderRadius: 400 / 2 }}
                             />    
                             </div>
