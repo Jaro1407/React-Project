@@ -24,8 +24,8 @@ function Home() {
                     <div className="col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center img-container">
                         <Imagenes
                             imagen={Imagen4}
-                            width='500'
-                            heigth='100'
+                            width='100%'
+                            heigth='100%'
                             alt='Reunion'
                             style={{ borderRadius: 400 / 2 }}
                         />
@@ -35,8 +35,8 @@ function Home() {
                     <div className="col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center img-container">
                         <Imagenes
                             imagen={Imagen5}
-                            width='500'
-                            heigth='100'
+                            width='100%'
+                            heigth='100%'
                             alt='Reunion'
                             style={{ borderRadius: 400 / 2 }}
                         />
