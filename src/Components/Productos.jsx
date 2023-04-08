@@ -26,7 +26,7 @@ function Productos() {
                         </p>
                     </div>
                     <div className="col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center img-container">
-                        <div id="carouselExample" className="carousel slide">
+                        <div id="carouselExample" className="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div className="carousel-inner">
                             <div className="carousel-item active">
                             <Imagenes
@@ -69,7 +69,7 @@ function Productos() {
                 </div>
                 <div className="row content-container">
                     <div className="col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center img-container">
-                    <div id="carousel" className="carousel slide">
+                    <div id="carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div className="carousel-inner">
                             <div className="carousel-item active">
                             <Imagenes
