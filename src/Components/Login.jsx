@@ -14,6 +14,14 @@ function Login () {
         username: '',
         password: ''
     })
+
+
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
+    const [formErrors, setFormErrors] = useState({
+      username: '',
+      password: ''
+    });
         
     // This function is to handle the inpput changes and update the state
     // handleInputChange will be call when the user types into the login form  
@@ -25,7 +33,7 @@ function Login () {
 
             // use setFormValues function to update the state of the formValues object declared above
             // use spread operator to create a new object that contains all the properties of the formValues object
-            setFormValues({ ...formValues, [name]: value });
+            setFormValues((prevState) => ({ ...prevState, [name]: value }));
         };
 
     // This function is to handle the form submission and check the user credentials 
@@ -33,6 +41,7 @@ function Login () {
     const handleSubmit = (e) => {
             // This is to avoid reload the page
             e.preventDefault();
+            setFormSubmitted(true);
             // extracting the username and password from the formValues state variable
             const { username, password } = formValues;
 
@@ -41,11 +50,12 @@ function Login () {
             const user = users.users.find(user => user.username === username && user.password === password);
 
             // use truthy statement to check if the result of the find method is undefined login will fail otherwise login success
-            if (user) {
+            // We also validate that input field are filled
+            if (!user) {
+                setFormErrors({username:'Usuario o Contraseña Invalido', password:'Usuario o Contraseña Invalido'});
+            } else {
                 console.log('Logged in successfully!');
                 navigate('/celulares');
-            } else {
-                console.log('Invalid username or password.');
             }
         }; 
 
@@ -60,14 +70,23 @@ function Login () {
                             <h2>Bienvenido al Portal de Empleados</h2>
                             <p>Inicia Sesion para acceder a la plataforma</p>
                         </div>
-                        <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center">
+                        {/* using template literal to add the was-validated class whether formSubmitted is truthy */}
+                        <form className={`needs-validation ${formSubmitted && 'was-validated'} d-flex flex-column align-items-center`} onSubmit={handleSubmit} noValidate>
                             <div className="form-group mb-5">
                                 <label htmlFor="username">Username:</label>
-                                <input type="text" name="username" required autoComplete="off" value={formValues.username} onChange={handleInputChange} />
+                                {/* add is-invalid class to form-control class based on formErrors is truthy */}
+                                <input className={`form-control ${formErrors.username && 'is-invalid'}`} type="text" name="username" required autoComplete="off" value={formValues.username} onChange={handleInputChange} />
+                                {/* we will render a div if formErrors is not truthy  */}
+                                {formErrors.username && <div className="invalid-feedback">{formErrors.username}</div>}
+
                             </div>
                             <div className="form-group mb-5">
                                 <label htmlFor="password">Password:</label>
-                                <input type="password" name="password" required value={formValues.password} onChange={handleInputChange} />
+                                {/* add is-invalid class to form-control class based on formErrors is truthy */}
+                                <input className={`form-control ${formErrors.password && 'is-invalid'}`} type="password" name="password" required value={formValues.password} onChange={handleInputChange} />
+                                {/* we will render a div if formErrors is not truthy  */}
+                                {formErrors.password && <div className="invalid-feedback">{formErrors.password}</div>}
+
                             </div>
                             <button type="submit">Login</button>
                         </form>

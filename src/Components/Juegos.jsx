@@ -3,6 +3,7 @@ import axios from 'axios';
 import Tabla from './Tabla';
 import MenuPortal from './MenuPortal'
 import Footer from './Footer';
+import '../stylesheet/Juegos.css';
 
 
 const Juegos = () => {
@@ -29,24 +30,26 @@ async function cargarJuegos() {
 }
 
 return (
-    <div>
-        <MenuPortal/>
-        <h1>Inventario Juegos</h1>
-        {/* This ternary statement will show the loader until we have an API response */}
+    <>
+      <div className="main-container">
+          <MenuPortal/>
+          <h1 className="text-center">Inventario Juegos</h1>
+          {/* This ternary statement will show the loader until we have an API response */}
 
-        {
-            juegos === undefined ?
-            <div>
-                <div className="spinner-border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-                <h2>Cargando...</h2>
-            </div>
-            :
-            <Tabla lista={juegos} controlador={'juegos'} cols={['juegoID', 'titulo', 'descripcion', 'plataforma', 'precio', 'categoria']} />
-        }
-        <Footer />
-    </div>
+          {
+              juegos === undefined ?
+              <div className="d-flex flex-column align-items-center">
+                  <div className="spinner-border" role="status">
+                      <span className="visually-hidden">Loading...</span>
+                  </div>
+                  <h2>Cargando...</h2>
+              </div>
+              :
+              <Tabla lista={juegos} controlador={'juegos'} cols={['juegoID', 'titulo', 'descripcion', 'plataforma', 'precio', 'categoria']} />
+          }
+      </div>
+      <Footer />
+    </> 
 )
 }
 

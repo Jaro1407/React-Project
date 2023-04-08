@@ -3,6 +3,7 @@ import axios from 'axios';
 import Tabla from './Tabla';
 import MenuPortal from './MenuPortal'
 import Footer from './Footer';
+import '../stylesheet/Celulares.css';
 
 const Celulares = () => {
 
@@ -28,25 +29,27 @@ const Celulares = () => {
     }
 
     return (
-        <div>
-            <MenuPortal/>
-            <h1>Inventario Celulares</h1>
-            {/* This ternary statement will show the loader until we have an API response */}
+        <>
+            <div className="main-container">
+                <MenuPortal/>
+                <h1 className="text-center">Inventario Celulares</h1>
+                {/* This ternary statement will show the loader until we have an API response */}
 
-            {
-                celulares === undefined ?
-                <div>
-                    <div className="spinner-border" role="status">
-                        <span className="visually-hidden">Loading...</span>
+                {
+                    celulares === undefined ?
+                    <div className="d-flex flex-column align-items-center">
+                        <div className="spinner-border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                        <h2>Cargando...</h2>
                     </div>
-                    <h2>Cargando...</h2>
-                </div>
-                :
-                <Tabla lista={celulares} controlador={'celulares'} cols={['celularID', 'marca', 'modelo', 'color', 'precio', 'descripcion', 'operadora']} />
-                
-            }
+                    :
+                    <Tabla lista={celulares} controlador={'celulares'} cols={['celularID', 'marca', 'modelo', 'color', 'precio', 'descripcion', 'operadora']} />
+                    
+                }
+            </div>
             <Footer />
-        </div>
+        </>
     )
 }
 
