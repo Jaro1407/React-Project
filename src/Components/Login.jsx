@@ -88,7 +88,7 @@ function Login () {
                                 {formErrors.password && <div className="invalid-feedback">{formErrors.password}</div>}
 
                             </div>
-                            <button type="submit">Login</button>
+                            <button type="submit" className="btn-login">Login</button>
                         </form>
                     </div>
                     <div className="col-lg-6 col-md-4 d-none d-md-block login-right">

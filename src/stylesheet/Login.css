@@ -54,7 +54,7 @@ input[type=password] {
   background: rgb(194, 229, 247);
 }
 
-button {
+.btn-login {
     border: none;
     color: white;
     padding: 1rem;
@@ -70,7 +70,7 @@ button {
     transition: .5s ease-in-out;
   }
 
-button:hover {
+.btn-login:hover {
     background: rgb(17, 162, 241);
 }
 
