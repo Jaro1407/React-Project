@@ -64,7 +64,7 @@ function Login () {
 
         <div className="login-container d-flex">
             <div className="container d-flex align-items-center justify-content-center">
-                <div className="row d-flex align-items-center mx-4">
+                <div className="row d-flex flex-nowrap p-4 justify-content-center align-items-center gap-3 login-wrapper">
                     <div className="col-lg-6 col-md-8 login-left">
                         <div className="login-header mb-5">
                             <h2>Bienvenido al Portal de Empleados</h2>
