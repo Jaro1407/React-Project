@@ -51,7 +51,7 @@ input[type=password] {
   width: 100%;
   font-size: 18px;
   border-radius: 100px;
-  background: rgb(92, 113, 138);
+  background: #C1C1C1;
 }
 
 .btn-login {

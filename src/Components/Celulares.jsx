@@ -32,7 +32,7 @@ const Celulares = () => {
         <>
             <div className="main-container">
                 <MenuPortal/>
-                <fieldset class="border p-5">
+                <fieldset className="border p-5">
                 <legend><h1 className="text-center">Inventario Celulares</h1></legend>
                 {/* This ternary statement will show the loader until we have an API response */}
 

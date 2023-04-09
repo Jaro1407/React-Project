@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import MenuPortal from './MenuPortal'
 import FooterForm from "./FooterForm"
+import '../stylesheet/JuegosForm.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from "axios"
 
@@ -141,7 +142,7 @@ const JuegosForm = ({del}) =>{
         <div>
         <MenuPortal />
         
-            
+            <fieldset className="border p-5">
             <form id="formulario" className="needs-validation" noValidate>
                 {
                     p.id !== undefined ?
@@ -189,6 +190,7 @@ const JuegosForm = ({del}) =>{
                     <button className="btn btn-warning" onClick={() => navigate("/Juegos")}>Cancelar</button>
                 </div>
             </form>
+            </fieldset>
         
         
         <FooterForm/>    

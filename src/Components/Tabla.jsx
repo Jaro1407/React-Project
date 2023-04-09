@@ -7,7 +7,7 @@ const Tabla = ({ cols, controlador, lista }) => {
 
     return (
         <div>
-            <fieldset class="border p-5">
+            <fieldset className="border p-5">
             <table className='table table-striped'>
                 <thead>
                     <tr>

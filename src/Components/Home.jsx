@@ -3,8 +3,8 @@ import Menu from "./Menu";
 import Footer from "./Footer"
 import '../stylesheet/Home.css';
 import Imagenes from './Imagenes';
-import Imagen4 from '../assets/Imagenes/image4.jpg';
-import Imagen5 from '../assets/Imagenes/image5.jpg';
+import Start from '../assets/Imagenes/Start.jpg';
+import Services from '../assets/Imagenes/Services.jpg';
 
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
                     </div>
                     <div className="col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center img-container">
                         <Imagenes
-                            imagen={Imagen4}
+                            imagen={Start}
                             width='100%'
                             heigth='100%'
                             alt='Reunion'
@@ -34,7 +34,7 @@ function Home() {
                 <div className="row content-container">
                     <div className="col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center img-container">
                         <Imagenes
-                            imagen={Imagen5}
+                            imagen={Services}
                             width='100%'
                             heigth='100%'
                             alt='Reunion'
