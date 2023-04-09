@@ -6,14 +6,17 @@ import axios from "axios"
 
 const JuegosForm = ({del}) =>{
 
+    
     const[titulo, setTitulo] = useState("")
     const[descripcion, setDescripcion] = useState("")
     const[plataforma, setPlataforma] = useState("")
     const[precio, setPrecio] = useState("")
     const[categoria, setCategoria] = useState("")
 
-    let p = useParams()
+    
     const navigate = useNavigate()
+    const p = useParams()
+
   
     useEffect(() =>{
         if(p.id !== undefined)
