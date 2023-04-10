@@ -4,6 +4,7 @@ import FooterForm from "./FooterForm"
 import { useNavigate, useParams } from 'react-router-dom'
 import '../stylesheet/CelularesForm.css'
 import axios from "axios"
+// import { Download } from 'react-bootstrap-icons'
 
 
 
@@ -195,7 +196,10 @@ const CelularesForm = ({del}) =>{
                 </div>
 
                 <div className="form-group">
-                    <input type="submit" onClick={(e) => enviar(e)} className={`btn btn-${p.id === undefined ? "success" : del === true ? "danger" : "primary"}`} value={p.id === undefined ? "Guardar" : del === true ? "Eliminar" : "Editar"} />
+                    <input type="submit" onClick={(e) => enviar(e)} 
+                    className={`btn btn-${p.id === undefined ? "success" : del === true ? "danger" : "primary"}`} 
+                    value={p.id === undefined ? "Guardar" : del === true ? "Eliminar" : "Editar"} />
+                    
                     <button className="btn btn-warning" onClick={() => navigate("/Celulares")}>Cancelar</button>
                 </div>
             </form>

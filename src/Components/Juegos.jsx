@@ -46,7 +46,7 @@ const Juegos = () => {
                                 <h2>Cargando...</h2>
                             </div>
                             :
-                            <Tabla lista={juegos} controlador={'juegos'} cols={['juegoID', 'titulo', 'descripcion', 'plataforma', 'precio', 'categoria']} />
+                            <Tabla lista={juegos} controlador={'juegos'} cols={['ID', 'Titulo', 'Descripcion', 'Plataforma', 'Precio', 'Categoria']} />
                     }
                 </fieldset>
             </div>

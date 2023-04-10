@@ -45,7 +45,7 @@ const Celulares = () => {
                         <h2>Cargando...</h2>
                     </div>
                     :
-                    <Tabla lista={celulares} controlador={'celulares'} cols={['celularID', 'marca', 'modelo', 'color', 'precio', 'descripcion', 'operadora']} />
+                    <Tabla lista={celulares} controlador={'celulares'} cols={['ID', 'Marca', 'Modelo', 'Color', 'Precio', 'Descripcion', 'Operadora']} />
                     
                 }
                 </fieldset>

@@ -17,10 +17,10 @@ const Menu = () => {
                         <Link className="nav-link active" to={"/"}><b>Home</b></Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to={"/Productos"}><b>Productos</b></Link>
+                        <Link className="nav-link" to={"/Productos"}><b>Productos</b></Link>
                     </li> 
                     <li className="nav-item">
-                        <Link className="nav-link active" to={"/Portal"}><b>Portal</b></Link>
+                        <Link className="nav-link" to={"/Portal"}><b>Portal</b></Link>
                     </li> 
                 </ul>
                 </div>
