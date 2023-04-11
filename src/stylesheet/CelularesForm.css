@@ -1,8 +1,14 @@
+.main-container {
+    
+    background-image: url("../assets/Imagenes/blob.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 #formulario {
     display: grid;
-    justify-content: center;
+
  }
   
 

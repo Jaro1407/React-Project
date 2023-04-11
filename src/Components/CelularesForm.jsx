@@ -143,7 +143,7 @@ const CelularesForm = ({del}) =>{
 
 
     return(
-        <div>
+        <div className="main-container">
         <MenuPortal />
         
         <fieldset className="border p-5">
