@@ -1,5 +1,5 @@
 .wrapper {
-    background-image: url("../assets/Imagenes/bg1.jpg");
+    background-image: url("../assets/Imagenes/wave1.svg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -33,3 +33,4 @@
     color:black;
     font-weight: 400;
 }
+
