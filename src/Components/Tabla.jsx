@@ -38,7 +38,7 @@ const Tabla = ({ cols, controlador, lista }) => {
                                     return <tr key={index}>
                                         {/* We use string interpolation on the link to construct a dynamic URL based on the controlador prop */}
                                         <td>
-                                            <Link to={`/${controlador}/edit/${Object.values(value)[0]}`} className='btn btn-success mx-1'>Editar <PencilSquare /></Link>
+                                            <Link to={`/${controlador}/edit/${Object.values(value)[0]}`} className='btn btn-secondary mx-1'>Editar <PencilSquare /></Link>
                                             <Link to={`/${controlador}/delete/${Object.values(value)[0]}`} className='btn btn-danger mx-1'>Eliminar <Trash /></Link>
                                         </td>
                                         {/* Here we use the Object.values method to extract the values of the properties from the value object*/}
