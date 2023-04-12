@@ -65,8 +65,11 @@ const CelularesForm = ({del}) =>{
                 guardar()
             else if(del !== true)
                 editar()
-            else
+            else{
+                let respuesta = window.confirm("Esta seguro que desea eliminar?")
+                if(respuesta === true)
                 eliminar()
+            }
         }
     }
 

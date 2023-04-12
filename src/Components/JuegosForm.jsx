@@ -63,8 +63,13 @@ const JuegosForm = ({del}) =>{
                 guardar()
             else if(del !== true)
                 editar()
-            else
-                eliminar()
+            else{
+                let respuesta = window.confirm("Esta seguro que desea eliminar?")
+                
+                if(respuesta === true)
+                    eliminar()
+            }
+              
         }
     }
 
